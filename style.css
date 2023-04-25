@@ -44,10 +44,9 @@ body{
 
 .rg-intro-text{
     margin-top: 6rem;
-    padding: 10px 0;
     padding-left: 1.5rem;
     position: relative;
-    text-align: left;
+    
 }
 
 .rg-intro-text::before{
@@ -71,10 +70,42 @@ body{
 
 .rg-intro-text p{
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     margin: 0;
-    font-weight: 500;
+    font-weight: 400;
     opacity: .83;
+    text-align: justify;
+    height: 50vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.rg-intro-text p::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+
+.rg-intro-text p::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.rg-intro-text p::-webkit-scrollbar-button:increment,.rg-intro-text p::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.rg-intro-text p::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.rg-intro-text p::-webkit-scrollbar-thumb {
+    background-color: var(--rg-blue-dark);
+    border-radius: 20px;
+    border: 2px solid var(--rg-blue-light);
+}
+
+.rg-intro-text p::-webkit-scrollbar-track {
+    border-radius: 10px;  
 }
 
 .rg-text-animate{
@@ -141,7 +172,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 2rem 1rem;
     box-sizing: border-box;
     border-radius: 10px;
     text-decoration: none;
@@ -151,15 +182,21 @@ body{
 .rg-text{
     display: inline-block;
     color: white;
+    font-size: .8em;
 }
 
 .rg-icon{
     width: 100%;
-    max-width: 80px;
+    max-width: 150px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
 }
 
 .rg-icon-fa{
-    font-size: 60px;
+    font-size: 50px;
     color: var(--rg-blue-light);
     transition: .3s;
 }
@@ -171,6 +208,30 @@ body{
 
 .rg-card-download-link:hover .rg-icon-fa{
     color: var(--rg-orange);
+}
+
+.rg-menu-contact{
+    list-style: none;
+    padding: 0;
+}
+
+.rg-menu-contact li{
+    margin: .5rem 0;
+    background-color: rgba(0, 0, 0, .15);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+.rg-menu-contact a{
+    text-decoration: none;
+    color: white;
+    opacity: .9;
+    font-size: .8rem;
+    transition: .3s;
+}
+
+.rg-menu-contact a:hover{
+    color: var(--rg-orange);
+    opacity: 1  ;
 }
 
 @keyframes moverTeleprompter {
